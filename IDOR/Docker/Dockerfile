@@ -5,6 +5,7 @@ python2-dev \
 py2-pip \ 
 git 
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/IDOR
 RUN pip2 install -r requirements.txt

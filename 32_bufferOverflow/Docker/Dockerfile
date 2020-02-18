@@ -24,6 +24,7 @@ RUN useradd -ms /bin/bash stack
 RUN echo "stack:stack" | chpasswd
 USER stack
 WORKDIR /home/stack
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 USER root
 RUN cp -r /home/stack/skf-labs/32_bufferOverflow/static /var/www/html

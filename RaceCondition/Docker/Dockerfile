@@ -6,6 +6,7 @@ py3-pip \
 git \
 bash
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/RaceCondition
 RUN pip3 install -r requirements.txt

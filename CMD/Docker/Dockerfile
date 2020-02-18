@@ -7,6 +7,7 @@ git \
 bash \
 imagemagick
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/CMD
 RUN pip3 install -r requirements.txt

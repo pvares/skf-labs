@@ -9,6 +9,7 @@ libc-dev \
 openldap-dev \
 git 
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/Ldap-injection-harder
 RUN pip2 install -r requirements.txt

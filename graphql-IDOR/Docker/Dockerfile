@@ -6,6 +6,7 @@ RUN apk update --no-cache && apk add python3 \
     bash \
     git
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/graphql-IDOR
 

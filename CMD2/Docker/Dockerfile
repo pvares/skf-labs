@@ -7,6 +7,7 @@ git \
 bash \ 
 zip
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/CMD2
 RUN pip3 install -r requirements.txt

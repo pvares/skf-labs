@@ -6,6 +6,7 @@ py2-pip \
 git \
 bash
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/SSTI
 RUN pip install -r requirements.txt

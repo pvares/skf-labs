@@ -26,6 +26,7 @@ RUN chmod u+s /home/stack/stack1
 
 #Setup webssh
 WORKDIR /
+ENV secret_key secret
 RUN git clone https://github.com/huashengdun/webssh
 WORKDIR webssh
 RUN python3 setup.py install

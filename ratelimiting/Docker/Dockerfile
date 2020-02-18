@@ -6,6 +6,7 @@ py2-pip \
 git \
 bash
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/ratelimiting
 RUN pip install -r requirements.txt

@@ -6,7 +6,9 @@ py3-pip \
 git \
 bash
 
+ENV secret_key secret
 RUN git clone https://github.com/pvares/skf-labs.git
+#ADD . /skf-labs/Auth-bypass-1
 WORKDIR /skf-labs/Auth-bypass-1
 RUN pip3 install -r requirements.txt
 CMD [ "python3", "./Login.py" ]
