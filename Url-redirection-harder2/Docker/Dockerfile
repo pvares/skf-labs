@@ -1,5 +1,5 @@
 FROM alpine:3.7
-MAINTAINER Davide Cioccia
+LABEL MAINTAINER Davide Cioccia
 RUN apk update --no-cache && apk add python3 \
 python3-dev \
 py3-pip \ 

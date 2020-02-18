@@ -1,5 +1,5 @@
 FROM alpine:3.7
-MAINTAINER Giulio Comi
+LABEL MAINTAINER Giulio Comi
 RUN apk update --no-cache && apk add python3 \
 python3-dev \
 py3-pip \ 

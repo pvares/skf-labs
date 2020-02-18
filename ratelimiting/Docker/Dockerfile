@@ -1,5 +1,5 @@
 FROM alpine:3.7
-MAINTAINER Abhishek "abhiabhi2306@gmail.com"
+LABEL MAINTAINER Abhishek "abhiabhi2306@gmail.com"
 RUN apk update --no-cache && apk add git \
 python2-dev \
 py2-pip \ 

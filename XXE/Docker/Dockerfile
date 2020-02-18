@@ -1,5 +1,5 @@
 FROM alpine:3.7
-MAINTAINER Glenn ten Cate <glenn.ten.cate@owasp.org>
+LABEL MAINTAINER Glenn ten Cate <glenn.ten.cate@owasp.org>
 RUN apk update --no-cache && apk add git \
 python2-dev \
 py2-pip \ 
