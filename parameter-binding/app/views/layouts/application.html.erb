@@ -8,6 +8,7 @@
 <title>Live demonstrations</title>
 
 <script src="/static/js/lumino.glyphs.js"></script>
+<script src="/static/js/flag.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,6 +17,8 @@
   </head>
 
   <body>
+
+    <input type=hidden value="{{flag}}" id="flag">
     <%= yield %>
   </body>
 </html>

@@ -21,10 +21,13 @@ def page_not_found(e):
 
 <!--Icons-->
 <script src="/static/js/lumino.glyphs.js"></script>
+<script src="/static/js/flag.js"></script>
 
 </head>
 
 <body>
+
+    <input type=hidden value="{{flag}}" id="flag">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
