@@ -2,6 +2,7 @@ from models.sqlimodel import *
 from flask import Flask, request, url_for, render_template, redirect, make_response, request
 import hashlib
 import hmac
+import os
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
@@ -48,7 +49,7 @@ def loggedin():
         username=values[0][0].lower()
         if username == 'admin':
             msg="Congratulations !"
-            flag=gen_flag
+            flag=gen_flag()
         else:
             flag=None
         return render_template("loggedin.html",username=username,msg=msg,flag=flag)
