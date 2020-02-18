@@ -52,7 +52,6 @@ def loggedin():
             flag=gen_flag()
         else:
             flag=None
-        print(flag)
         return render_template("loggedin.html",username=username,msg=msg,flag=flag)
     else:       
         return render_template("index.html",msg=txt)

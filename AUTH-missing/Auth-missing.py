@@ -1,8 +1,16 @@
 from flask import Flask, request, url_for, render_template, redirect
 from subprocess import call
+import os
+import hmac
+
+def gen_flag():
+    secret = os.environ["secret_key"]
+    hm = hmac.new(secret.encode('utf8'), b"auth-missing", "sha256")
+    return hm.hexdigest()
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 app.config['DEBUG'] = True
+
 
 @app.route("/")
 def start():
@@ -31,13 +39,13 @@ def load_account(user_id):
         username = "bob"
         password = "abcd1234"
         data = "Your secret message: [STILL NOT SET]"
-        return render_template("useraccount.html", username=username, password=password, data=data)
+        return render_template("useraccount.html", username=username, password=password, data=data, flag=gen_flag())
 
     elif user_id == "user02":
         username = "admin"
         password = "rootadmin"
         data = "I am the admin of this website."
-        return render_template("useraccount.html", username=username, password=password, data=data)
+        return render_template("useraccount.html", username=username, password=password, data=data, flag=gen_flag())
     else:
         username = "You need to set your usser account"
         password = "You need to set your password"

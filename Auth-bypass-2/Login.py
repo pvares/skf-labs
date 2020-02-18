@@ -1,11 +1,19 @@
 from models.sqlimodel import *
 from flask import Flask, request, url_for, render_template, redirect, make_response, request
 import hashlib
+import os
+import hmac
+
+def gen_flag():
+    secret = os.environ["secret_key"]
+    hm = hmac.new(secret.encode('utf8'), b"auth-bypass-2", "sha256")
+    return hm.hexdigest()
 
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 app.config['DEBUG'] = True 
+
 
 
 @app.route("/")
@@ -43,7 +51,10 @@ def loggedin():
         username=values[0][0].lower()
         if username == 'admin':
             msg="Congratulations !"
-        return render_template("loggedin.html",username=username,msg=msg)
+            flag=gen_flag()
+        else:
+            flag=None
+        return render_template("loggedin.html",username=username,msg=msg,flag=flag)
     else:       
         return render_template("index.html",msg=txt)
 
