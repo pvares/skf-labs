@@ -1,3 +1,4 @@
 {
-    "XSS/": "xss"
+    "XSS/": "xss",
+    "Auth-bypass-1": "auth-bypass-1"
 }
