@@ -6,7 +6,7 @@ RUN apk update --no-cache && apk add python3 \
     bash \
     git
 
-RUN git clone https://github.com/blabla1337/skf-labs.git
+RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/graphql-IDOR
 
 RUN pip3 install -r requirements.txt

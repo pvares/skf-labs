@@ -7,7 +7,7 @@ git \
 bash \ 
 zip
 
-RUN git clone https://github.com/blabla1337/skf-labs.git
+RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/CMD2
 RUN pip3 install -r requirements.txt
 CMD [ "python3", "./CMD2.py" ]

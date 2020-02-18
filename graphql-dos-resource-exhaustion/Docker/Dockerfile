@@ -5,7 +5,7 @@ python3-dev \
 py3-pip \ 
 bash
 
-RUN git clone https://github.com/blabla1337/skf-labs.git
+RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/graphql-dos-resource-exhaustion
 
 RUN pip3 install -r requirements.txt 

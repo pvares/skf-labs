@@ -6,7 +6,7 @@ py2-pip \
 git \
 bash
 
-RUN git clone https://github.com/blabla1337/skf-labs.git
+RUN git clone https://github.com/pvares/skf-labs.git
 WORKDIR /skf-labs/RFI
 RUN pip2 install -r requirements.txt
 CMD [ "python2", "./RFI.py" ]
